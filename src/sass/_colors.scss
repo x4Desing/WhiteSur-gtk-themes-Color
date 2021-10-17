@@ -13,63 +13,83 @@
 $selected_bg_color:                 $theme_color_default;
 $w_bg_color_1:                      $theme_w_bg_default_1;
 $w_bg_color_2:                      $theme_w_bg_default_2;
+$w_bg_color_3:                      $theme_w_bg_default_3;
+$w_bg_color_4:                      $theme_w_bg_default_4;
 
 @if $theme == 'blue' {
   $selected_bg_color:               $theme_color_blue;
   $w_bg_color_1:                      $theme_w_bg_blue_1;
   $w_bg_color_2:                      $theme_w_bg_blue_2;
+  $w_bg_color_3:                      $theme_w_bg_blue_3;
+  $w_bg_color_4:                      $theme_w_bg_blue_4;
 }
 
 @if $theme == 'purple' {
   $selected_bg_color:               $theme_color_purple;
   $w_bg_color_1:                      $theme_w_bg_purple_1;
   $w_bg_color_2:                      $theme_w_bg_purple_2;
+  $w_bg_color_3:                      $theme_w_bg_purple_3;
+  $w_bg_color_4:                      $theme_w_bg_purple_4;
 }
 
 @if $theme == 'pink' {
   $selected_bg_color:               $theme_color_pink;
   $w_bg_color_1:                      $theme_w_bg_pink_1;
   $w_bg_color_2:                      $theme_w_bg_pink_2;
+  $w_bg_color_3:                      $theme_w_bg_pink_3;
+  $w_bg_color_4:                      $theme_w_bg_pink_4;
 }
 
 @if $theme == 'red' {
   $selected_bg_color:               $theme_color_red;
   $w_bg_color_1:                      $theme_w_bg_red_1;
   $w_bg_color_2:                      $theme_w_bg_red_2;
+  $w_bg_color_3:                      $theme_w_bg_red_3;
+  $w_bg_color_4:                      $theme_w_bg_red_4;
 }
 
 @if $theme == 'orange' {
   $selected_bg_color:               $theme_color_orange;
   $w_bg_color_1:                      $theme_w_bg_orange_1;
   $w_bg_color_2:                      $theme_w_bg_orange_2;
+  $w_bg_color_3:                      $theme_w_bg_orange_3;
+  $w_bg_color_4:                      $theme_w_bg_orange_4;
 }
 
 @if $theme == 'yellow' {
   $selected_bg_color:               $theme_color_yellow;
   $w_bg_color_1:                      $theme_w_bg_yellow_1;
   $w_bg_color_2:                      $theme_w_bg_yellow_2;
+  $w_bg_color_3:                      $theme_w_bg_yellow_3;
+  $w_bg_color_4:                      $theme_w_bg_yellow_4;
 }
 
 @if $theme == 'green' {
   $selected_bg_color:               $theme_color_green;
   $w_bg_color_1:                      $theme_w_bg_green_1;
   $w_bg_color_2:                      $theme_w_bg_green_2;
+  $w_bg_color_3:                      $theme_w_bg_green_3;
+  $w_bg_color_4:                      $theme_w_bg_green_4;
 }
 
 @if $theme == 'grey' {
   $selected_bg_color:               $theme_color_grey;
   $w_bg_color_1:                      $theme_w_bg_grey_1;
   $w_bg_color_2:                      $theme_w_bg_grey_2;
+  $w_bg_color_3:                      $theme_w_bg_grey_3;
+  $w_bg_color_4:                      $theme_w_bg_grey_4;
 }
 
 $primary_color:                     $selected_bg_color;
 $primary_bg_color_1:                     $w_bg_color_1;
 $primary_bg_color_2:                     $w_bg_color_2;
+$primary_bg_color_3:                     $w_bg_color_3;
+$primary_bg_color_4:                     $w_bg_color_4;
 
 // Base colors
-$base_color:                        if($variant == 'light', #ffffff, $primary_bg_color_1);
+$base_color:                        if($variant == 'light', $primary_bg_color_3, $primary_bg_color_1);
 $text_color:                        if($variant == 'light', #363636, #dadada);
-$bg_color:                          if($variant == 'light', #f5f5f5, $primary_bg_color_2);
+$bg_color:                          if($variant == 'light', $primary_bg_color_4, $primary_bg_color_2);
 $fg_color:                          if($variant == 'light', #242424, #dedede);
 $alt_fg_color:                      if($variant == 'light', #424242, #afafaf);
 $hint_fg_color:                     if($variant == 'light', #565656, #999999);
@@ -93,8 +113,8 @@ $selected_borders_color:            darken($selected_bg_color, 10%);
 $borders_color:                     if($variant == 'light', rgba(black, 0.12), rgba(white, 0.12));
 $light_borders_color:               if($variant == 'light', rgba(black, 0.08), rgba(white, 0.10));
 $dark_borders_color:                if($variant == 'light', rgba(black, 0.08), rgba(black, 0.15));
-$solid_borders_color:               if($variant == 'light', darken($primary_bg_color_1, 12%), lighten($primary_bg_color_1, 8%));
-$dark_solid_borders_color:          if($variant == 'light', darken($primary_bg_color_1, 12%), darken($primary_bg_color_1, 5%));
+$solid_borders_color:               if($variant == 'light', darken($primary_bg_color_3, 12%), lighten($primary_bg_color_1, 8%));
+$dark_solid_borders_color:          if($variant == 'light', darken($primary_bg_color_3, 12%), darken($primary_bg_color_1, 5%));
 $highlight_color:                   if($variant == 'light', rgba(white, 0.15), rgba(white, 0.1));
 
 // Background colors
@@ -124,7 +144,7 @@ $alt_disabled_fg_color:             if($variant == 'light', transparentize($alt_
 $disabled_bg_color:                 if($variant == 'light', mix($primary_bg_color_1, $base_color, 40%), lighten($primary_bg_color_1, 2%));
 
 // Headerbar colors
-$header_bg:                         if($variant == 'light', #ffffff, $bg_color);
+$header_bg:                         if($variant == 'light', $bg_color, $bg_color);
 $dark_header_bg:                    if($trans == 'true', rgba($bg_color, 0.95), $bg_color);
 $header_highlight:                  if($variant == 'dark', #434343, #f5f5f5); // For metacity
 
@@ -137,19 +157,19 @@ $header_fg:                         if($variant == 'light', #575757, #FDFDFD);
 $dark_sidebar_bg: white;
 
 @if $trans=='true' and $variant=='light' {
-  $dark_sidebar_bg:                 transparentize(#f0f0f0, 0.06);
+  $dark_sidebar_bg:                 transparentize($bg_color, 0.06);
 }
 
 @if $trans=='false' and $variant=='light' {
-  $dark_sidebar_bg:                 #f0f0f0;
+  $dark_sidebar_bg:                 $bg_color;
 }
 
 @if $trans=='true' and $variant=='dark' {
-  $dark_sidebar_bg:                 transparentize($primary_bg_color_2, 0.05);
+  $dark_sidebar_bg:                 transparentize($bg_color, 0.05);
 }
 
 @if $trans=='false' and $variant=='dark' {
-  $dark_sidebar_bg:                 $primary_bg_color_2;
+  $dark_sidebar_bg:                 $bg_color;
 }
 
 $dark_sidebar_fg:                   $text_color;
@@ -158,7 +178,7 @@ $sidebar_theme_color:               if($variant == 'light', rgba(black, 0.12), r
 
 //OSD colors
 $osd_fg_color:                      #dadada;
-$osd_bg_color:                      if($trans=='true', rgba(#2a2a2a, 0.9), $primary_bg_color_2);
+$osd_bg_color:                      if($trans=='true', rgba($bg_color, 0.25), $bg_color);
 $osd_button_bg:                     rgba(lighten($osd_bg_color, 22%), 0.96);
 $osd_button_border:                 $dark_borders_color;
 $osd_entry_bg:                      rgba(lighten($osd_bg_color, 22%), 0.96);
@@ -168,25 +188,25 @@ $osd_disabled_fg_color:             rgba($osd_fg_color, 0.35);
 $osd_borders_color:                 $dark_borders_color;
 
 // Menu colors
-$menu_bg:                           if($variant == 'light', $base_color, $primary_bg_color_2);
+$menu_bg:                           if($variant == 'light', $bg_color, $bg_color);
 $menu_bd:                           if($variant == 'light', rgba(black, 0.05), rgba(white, 0.08));
 
-@if $trans == 'true' { $menu_bg:    if($variant == 'light', rgba($base_color, 0.95), rgba($primary_bg_color_2, 0.95)); }
+@if $trans == 'true' { $menu_bg:    if($variant == 'light', rgba($bg_color, 0.95), rgba($bg_color, 0.95)); }
 
-$dialog_bg_color:                   if($variant == 'light', darken($primary_bg_color_2, 5%), $primary_bg_color_2);
-@if $trans=='true' { $dialog_bg_color: if($variant == 'light', rgba($primary_bg_color_2, 0.95), rgba($primary_bg_color_2, 0.95)); }
+$dialog_bg_color:                   if($variant == 'light', darken($bg_color, 5%), $bg_color);
+@if $trans=='true' { $dialog_bg_color: if($variant == 'light', rgba($bg_color, 0.95), rgba($bg_color, 0.95)); }
 
-$submenu_bg_color:                  if($variant == 'light', rgba(white, 1), rgba(white, 0.1));
-@if $trans=='true' { $submenu_bg_color: if($variant == 'light', rgba(white, 0.75), rgba(white, 0.15)); }
+$submenu_bg_color:                  if($variant == 'light', rgba($bg_color, 1), rgba($bg_color, 0.1));
+@if $trans=='true' { $submenu_bg_color: if($variant == 'light', rgba($bg_color, 0.75), rgba($bg_color, 0.15)); }
 
 // Panel colors
-$panel_bg:                          if($variant == 'light', #f1f1f1, $primary_bg_color_2);
+$panel_bg:                          if($variant == 'light', $bg_color, $bg_color);
 
 @if $trans == 'true' {
-  $panel_bg:                        if($variant == 'light', rgba(white, $panel_opacity/2 + 0.08), rgba(black, $panel_opacity));
+  $panel_bg:                        if($variant == 'light', rgba($bg_color, $panel_opacity/2 + 0.08), rgba(black, $panel_opacity));
 
   @if $panel_font == 'black' {
-    $panel_bg:                      if($variant == 'light', rgba(white, $panel_opacity/2 + 0.08), rgba(black, $panel_opacity/2));
+    $panel_bg:                      if($variant == 'light', rgba($bg_color, $panel_opacity/2 + 0.08), rgba(black, $panel_opacity/2));
   }
 }
 
@@ -194,10 +214,10 @@ $panel_fg:                          if($trans == 'true' and $panel_font == 'whit
 $panel_track:                       if(($trans == 'false' or $panel_font == 'black') and $variant == 'light', rgba(black, 0.15), rgba(white, 0.28));
 $panel_divider:                     if(($trans == 'false' or $panel_font == 'black') and $variant == 'light', rgba(black, 0.08), rgba(white, 0.15));
 
-$dash_bg:                           if($variant == 'light', rgba(#d1d1d1, $panel_opacity + 0.33), rgba($primary_bg_color_2, $panel_opacity/2 + 0.6));
+$dash_bg:                           if($variant == 'light', rgba($bg_color, $panel_opacity + 0.33), rgba($bg_color, $panel_opacity/2 + 0.6));
 
 @if $trans == 'true' and $panel_font == 'black' {
-  $dash_bg:                         if($variant == 'light', rgba(#d1d1d1, $panel_opacity/2 + 0.08), rgba($primary_bg_color_2, $panel_opacity + 0.15));
+  $dash_bg:                         if($variant == 'light', rgba($bg_color, $panel_opacity/2 + 0.08), rgba($bg_color, $panel_opacity + 0.15));
 }
 
 $dash_fg: if($variant == 'light', black, white);
@@ -209,7 +229,7 @@ $entry_border:                      $borders_color;
 $entry_highlight:                   rgba($selection_mode_bg, 0.75);
 
 // Button colors
-$button_bg:                         if($variant == 'light', white, $selected_bg_color);
+$button_bg:                         if($variant == 'light', $bg_color, $selected_bg_color);
 $button_active_top:                 if($variant == 'light', $selected_bg_color, $selected_bg_color);
 $button_active_bottom:              if($variant == 'light', $selected_bg_color, $selected_bg_color);
 $button_active_hover_top:           if($variant == 'light', $selected_bg_color, $selected_bg_color);
