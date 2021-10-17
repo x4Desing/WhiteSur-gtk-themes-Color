@@ -3,6 +3,10 @@
 <p align="center"> <img src="CapturaBlue.png"/> </p>
 <p align="center"> <img src="CapturaRed.png"/> </p>
 <p align="center"> <img src="CapturaPink.png"/> </p>
+
+### To edit the colors
+Change the colors in `/src/sass/_colors-palette.scss`.
+<br>
 <p align="center"> <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/pictures/pictures/macbook.png"/> </p>
 
 <br>
