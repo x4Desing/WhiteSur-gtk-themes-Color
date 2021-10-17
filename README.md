@@ -1,4 +1,5 @@
-<h1 align="center"> WhiteSur GTK Theme </h1>
+<h1 align="center"> WhiteSur GTK Theme Color</h1>
+<p align="center"> <img src="CapturaGrey.png"/> </p>
 <p align="center"> <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/pictures/pictures/macbook.png"/> </p>
 
 <br>
