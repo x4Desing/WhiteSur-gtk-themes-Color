@@ -178,7 +178,7 @@ $sidebar_theme_color:               if($variant == 'light', rgba(black, 0.12), r
 
 //OSD colors
 $osd_fg_color:                      #dadada;
-$osd_bg_color:                      if($trans=='true', rgba($bg_color, 0.25), $bg_color);
+$osd_bg_color:                      if($trans=='true', rgba($primary_bg_color_2, 0.25), $primary_bg_color_2);
 $osd_button_bg:                     rgba(lighten($osd_bg_color, 22%), 0.96);
 $osd_button_border:                 $dark_borders_color;
 $osd_entry_bg:                      rgba(lighten($osd_bg_color, 22%), 0.96);
@@ -203,10 +203,10 @@ $submenu_bg_color:                  if($variant == 'light', rgba($bg_color, 1), 
 $panel_bg:                          if($variant == 'light', $bg_color, $bg_color);
 
 @if $trans == 'true' {
-  $panel_bg:                        if($variant == 'light', rgba($bg_color, $panel_opacity/2 + 0.08), rgba(black, $panel_opacity));
+  $panel_bg:                        if($variant == 'light', rgba($bg_color, $panel_opacity/2 + 0.08), rgba($bg_color, $panel_opacity/2));
 
   @if $panel_font == 'black' {
-    $panel_bg:                      if($variant == 'light', rgba($bg_color, $panel_opacity/2 + 0.08), rgba(black, $panel_opacity/2));
+    $panel_bg:                      if($variant == 'light', rgba($bg_color, $panel_opacity/2 + 0.08), rgba($bg_color, $panel_opacity/2));
   }
 }
 
@@ -214,7 +214,8 @@ $panel_fg:                          if($trans == 'true' and $panel_font == 'whit
 $panel_track:                       if(($trans == 'false' or $panel_font == 'black') and $variant == 'light', rgba(black, 0.15), rgba(white, 0.28));
 $panel_divider:                     if(($trans == 'false' or $panel_font == 'black') and $variant == 'light', rgba(black, 0.08), rgba(white, 0.15));
 
-$dash_bg:                           if($variant == 'light', rgba($bg_color, $panel_opacity + 0.33), rgba($bg_color, $panel_opacity/2 + 0.6));
+$dash_bg:                           if($variant == 'light', rgba($bg_color, $panel_opacity/2 + 0.08), rgba($bg_color, $panel_opacity/2));
+//$dash_bg:                           if($variant == 'light', rgba($bg_color, $panel_opacity + 0.33), rgba($bg_color, $panel_opacity/2 + 0.6));
 
 @if $trans == 'true' and $panel_font == 'black' {
   $dash_bg:                         if($variant == 'light', rgba($bg_color, $panel_opacity/2 + 0.08), rgba($bg_color, $panel_opacity + 0.15));
@@ -229,11 +230,11 @@ $entry_border:                      $borders_color;
 $entry_highlight:                   rgba($selection_mode_bg, 0.75);
 
 // Button colors
-$button_bg:                         if($variant == 'light', $bg_color, $selected_bg_color);
-$button_active_top:                 if($variant == 'light', $selected_bg_color, $selected_bg_color);
-$button_active_bottom:              if($variant == 'light', $selected_bg_color, $selected_bg_color);
-$button_active_hover_top:           if($variant == 'light', $selected_bg_color, $selected_bg_color);
-$button_active_hover_bottom:        if($variant == 'light', $selected_bg_color, $selected_bg_color);
+$button_bg:                         if($variant == 'light', $bg_color, $bg_color);
+$button_active_top:                 if($variant == 'light', $bg_color, $bg_color);
+$button_active_bottom:              if($variant == 'light', $bg_color, $bg_color);
+$button_active_hover_top:           if($variant == 'light', $bg_color, $bg_color);
+$button_active_hover_bottom:        if($variant == 'light', $bg_color, $bg_color);
 
 $button_border:                     $borders_color;
 $button_active_border:              #487afa;
