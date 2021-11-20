@@ -1,7 +1,7 @@
 <svg width="176" height="260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs id="theme">
   <linearGradient id="selected_bg_color" osb:paint="solid">
-   <stop stop-color="#E9873A" offset="0"/>
+   <stop stop-color="#DC5426" offset="0"/>
   </linearGradient>
   <clipPath id="clipPath4695">
    <rect x="104" y="-280.64" width="21" height="26" rx="0" ry="0" fill="#ff1616" opacity=".64"/>

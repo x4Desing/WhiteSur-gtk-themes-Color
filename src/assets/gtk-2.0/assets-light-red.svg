@@ -4,7 +4,7 @@
    <stop stop-color="#f5f6f7" offset="0"/>
   </linearGradient>
   <linearGradient id="entry_highlight" osb:paint="solid">
-   <stop stop-color="#ED5F5D" offset="0"/>
+   <stop stop-color="#dc2626" offset="0"/>
   </linearGradient>
   <linearGradient id="selected_fg_color" osb:paint="solid">
    <stop stop-color="#ffffffgit" offset="0"/>
